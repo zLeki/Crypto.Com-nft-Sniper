@@ -46,6 +46,7 @@ var (
 		}
 		return "", fmt.Errorf("could not find serial for %s", name)
 	}
+	mutex = &sync.Mutex{}
 )
 
 const (
@@ -111,7 +112,9 @@ func SnipeThread(c *types.Config, ws <-chan int) {
 				break
 			}
 			for i, v := range c.GetFloor() {
+				mutex.Lock()
 				nftPrices[i] = int(v)
+				mutex.Unlock()
 			}
 		}
 
@@ -125,7 +128,6 @@ func Cui(c *types.Config) {
 	fmt.Println("Email: any-grid05@icloud.com")
 	fmt.Println("Website: https://www.leki.sbs/portfolio")
 	fmt.Println("Github: github.com/zLeki")
-	var mutex = &sync.Mutex{}
 	go func() {
 		for {
 			mutex.Lock()
@@ -152,7 +154,6 @@ func Cui(c *types.Config) {
 			}
 
 			mutex.Unlock()
-			time.Sleep(time.Millisecond * 100)
 
 		}
 

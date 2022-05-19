@@ -1,0 +1,14 @@
+{
+  "projects": [
+    {
+      "name":"loaded lions",
+      "url": "https://crypto.com/nft/collection/82421cf8e15df0edcaa200af752a344f"
+    },
+    {
+      "name": "alpha bot",
+      "url": "https://crypto.com/nft/collection/4ff90f089ac3ef9ce342186adc48a30d"
+    }
+
+  ],
+  "solanawalletkey": "apiapipaipapiapi"
+}

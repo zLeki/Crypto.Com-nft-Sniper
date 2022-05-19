@@ -152,7 +152,7 @@ func Cui(c *types.Config) {
 			}
 
 			mutex.Unlock()
-			time.Sleep(time.Millisecond * 10)
+			time.Sleep(time.Millisecond * 100)
 
 		}
 
@@ -171,14 +171,15 @@ func Cui(c *types.Config) {
 			log.Fatal(err)
 		}
 		confidence := int(cpuUsage[0])
+
 		fmt.Printf("CPU Usage [")
 		for i := 0; i < confidence/10; i++ {
 			fmt.Printf(confident)
 		}
-		for i := 0; i < 10-confidence/10; i++ {
+		for i := 0; i < 10-(confidence/10); i++ {
 			fmt.Printf(uncertain)
 		}
-		fmt.Printf("]\n")
+		fmt.Printf("] %v%%\n", int(cpuUsage[0]))
 		time.Sleep(time.Second * 1)
 
 		clear[runtime.GOOS]()

@@ -2,11 +2,13 @@ module SolanaNftSniper
 
 go 1.18
 
-require github.com/zLeki/go-cloudflare-scraper v0.0.0-20220515131541-191754ed6b9f
+require github.com/shirou/gopsutil v3.21.11+incompatible
 
 require (
-	github.com/k4s/phantomgo v0.0.0-20161104020322-11963773aa04 // indirect
-	github.com/k4s/webrowser v0.0.0-20160107091637-934d526d0f27 // indirect
-	github.com/robertkrimen/otto v0.0.0-20211024170158-b87d35c0b86f // indirect
-	gopkg.in/sourcemap.v1 v1.0.5 // indirect
+	github.com/go-ole/go-ole v1.2.6 // indirect
+	github.com/stretchr/testify v1.7.0 // indirect
+	github.com/tklauser/go-sysconf v0.3.10 // indirect
+	github.com/tklauser/numcpus v0.4.0 // indirect
+	github.com/yusufpapurcu/wmi v1.2.2 // indirect
+	golang.org/x/sys v0.0.0-20220517195934-5e4e11fc645e // indirect
 )

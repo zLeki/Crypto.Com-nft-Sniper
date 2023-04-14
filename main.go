@@ -188,9 +188,11 @@ func Cui(c *types.Config) {
 
 }
 func UpdateOriginalPrices() bool {
+	mutex.Lock()
 	for i, v := range c.GetFloor() {
 		originalPrices[i] = int(v)
 	}
+	mutex.Unlock()
 	return true
 }
 
